@@ -1,0 +1,56 @@
+@use "slick-carousel/slick/slick.css";
+@use "slick-carousel/slick/slick-theme.css";
+
+.slide {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0px;
+
+  .container {
+    width: 1400px;
+    position: relative;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .slick-prev {
+    left: -50px; /* Adjust left position */
+  }
+
+  .slick-next {
+    right: -30px; /* Adjust right position */
+  }
+
+  .slick-prev::before,
+  .slick-next::before {
+    content: ""; /* Remove default arrow content */
+  }
+
+  .slick-prev::after,
+  .slick-next::after {
+    content: "‹"; /* Use custom arrow icons */
+    font-size: 24px;
+    color: #000; /* Arrow color */
+    font-family: sans-serif;
+  }
+
+  .slick-next::after {
+    content: "›";
+  }
+}
+
+
